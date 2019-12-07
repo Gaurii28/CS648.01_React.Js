@@ -33,20 +33,21 @@ class ProductForm extends React.Component{
         }
     render() {
         return (
+            <div class="col-md-4">
             <form onSubmit={this.handleSave}>
                 <br/>
-                <h1>Add a New Product</h1><br/>
+                <h4>Add a New Product</h4><br/>
                 <label> Name:<br/>
-                    <input type="text" name="name" onChange={this.handleChange}/>
+                    <input type="text"  class="form-control" name="name" onChange={this.handleChange}/>
                 </label><br/>
                 <label> Category:<br/>
-                    <input type="text" /* onChange={this.handleChange}*//><br />
+                    <input type="text"  class="form-control" name="category" onChange={this.handleChange}/><br />
                 </label><br/>
                 <label> Price:<br/>
-                    <input type="text" name="price" onChange={this.handleChange}/><br />
+                    <input type="text"  class="form-control" name="price" onChange={this.handleChange}/><br />
                 </label><br/>
-                <input type="submit" value="save"/>
-            </form>
+                <input type="submit" class="btn btn-primary" value="Save"/>
+            </form></div>
             );
     }
 }

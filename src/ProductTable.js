@@ -25,8 +25,7 @@ class ProductTable extends Component {
 
             let rows = [
                 <tr>
-                    <th>Product Name</th>
-                    <th>Price</th>
+                
                 </tr>
             ];
 
@@ -43,11 +42,27 @@ class ProductTable extends Component {
     render(){
         return(
             <div>
-                <h1>Available Products List</h1>
-                <p>Showing all available products:</p>
-                <table>
+                  <div class="col-md-4">
+                <table class="table table-sm table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Category
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     {this.renderTableRows(this.props.product)}
+                    </tbody>
                 </table>
+            </div>
             </div>
         );
     }
